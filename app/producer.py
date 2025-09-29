@@ -47,7 +47,7 @@ def main():
 
   print(f"KAFKA_SASL_MECHANISM   : {KAFKA_SASL_MECHANISM}")
   print(f"KAFKA_SASL_USERNAME    : {KAFKA_SASL_USERNAME}")
-  print(f"KAFKA_SASL_PASSWORD    : {KAFKA_SASL_PASSWORD}")
+  print(f"KAFKA_SASL_PASSWORD    : ******")
 
   print(f"JOB_TOPIC_NAME: {JOB_TOPIC_NAME}")
   print(f"JOB_MSG_BYTES : {JOB_MSG_BYTES}")
@@ -60,7 +60,7 @@ def main():
     "security.protocol": KAFKA_SECURITY_PROTOCOL,
     "sasl.mechanisms":   KAFKA_SASL_MECHANISM,
     "sasl.username":     KAFKA_SASL_USERNAME,
-    "sasl.password":     "******" * (len(KAFKA_SASL_PASSWORD) > 0),
+    "sasl.password":     KAFKA_SASL_PASSWORD,
     #
     "compression.type": "none",
     "linger.ms": JOB_LINGER_MS,
